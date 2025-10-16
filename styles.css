@@ -575,6 +575,132 @@ nav {
     justify-content: center;
 }
 
+/* Home News Section */
+.home-news-section {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.home-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.home-news-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+}
+
+.home-news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.home-news-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.home-news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.home-news-card:hover .home-news-image img {
+    transform: scale(1.1);
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.badge-urgent {
+    background: var(--amarillo);
+    color: var(--negro);
+}
+
+.badge-academic {
+    background: var(--verde-oscuro);
+}
+
+.badge-research {
+    background: var(--verde-medio);
+}
+
+.badge-event {
+    background: var(--verde-claro);
+    color: var(--negro);
+}
+
+.home-news-content {
+    padding: 1.5rem;
+}
+
+.news-date {
+    color: #666;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.home-news-content h3 {
+    font-size: 1.2rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.home-news-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.news-link {
+    color: var(--verde-oscuro);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.news-link:hover {
+    color: var(--verde-medio);
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .home-news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Footer */
 footer {
     background: var(--negro);
