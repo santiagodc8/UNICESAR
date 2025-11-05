@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas Académicos - Universidad Popular del Cesar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="programas.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="header-top">
+        <div class="header-top-content">
+            <div>📞 PBX: +57 (605) 588-5592 | 📧 info@unicesar.edu.co</div>
+            <div class="header-top-links">
+                <a href="#">Transparencia</a>
+                <a href="#">PQRS</a>
+                <a href="#">Correo Institucional</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Logo UNICESAR" class="logo-img">
+                <div class="logo-text">
+                    <h1>Universidad Popular del Cesar</h1>
+                    <p>UNICESAR</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programas.html" style="color: #0A7338; font-weight: 700;">Programas</a></li>
+                <li><a href="admisiones.html">Admisiones</a></li>
+                <li><a href="#investigacion">Investigación</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a class="btn-portal" href="#">Portal Estudiantil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Programas -->
+    <section class="programs-hero">
+        <div class="container">
+            <h1>Programas Académicos</h1>
+            <p>Descubre nuestra amplia oferta educativa de pregrado y posgrado</p>
+        </div>
+    </section>
+
+    <!-- Filtros de Programas -->
+    <section class="programs-filters">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="tab-btn active" data-level="pregrado">Pregrado</button>
+                <button class="tab-btn" data-level="especializacion">Especializaciones</button>
+                <button class="tab-btn" data-level="maestria">Maestrías</button>
+                <button class="tab-btn" data-level="doctorado">Doctorados</button>
+            </div>
+            <div class="search-filter">
+                <input type="text" placeholder="Buscar programa..." id="programSearch">
+                <select id="facultyFilter">
+                    <option value="todas">Todas las Facultades</option>
+                    <option value="ingenierias">Ingenierías</option>
+                    <option value="salud">Ciencias de la Salud</option>
+                    <option value="economicas">Ciencias Económicas</option>
+                    <option value="educacion">Educación y Artes</option>
+                    <option value="derecho">Derecho</option>
+                    <option value="humanas">Ciencias Sociales</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programas Grid -->
+    <section class="programs-list">
+        <div class="container">
+            <!-- Facultad de Ingenierías -->
+            <div class="faculty-section" data-faculty="ingenierias">
+                <h2 class="faculty-title">
+                    <span class="faculty-icon">⚙️</span>
+                    Facultad de Ingenierías y Tecnológicas
+                </h2>
+                
+                <div class="programs-grid">
+                    <!-- Ingeniería de Sistemas -->
+                    <div class="program-card-detail" data-level="pregrado">
+                        <div class="program-header-detail">
+                            <div class="program-badge">Acreditado</div>
+                            <h3>Ingeniería de Sistemas</h3>
+                            <p class="program-degree">Título: Ingeniero de Sistemas</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>10 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 SNIES:</span>
+                                <span>1568</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Forma profesionales capaces de diseñar, desarrollar e implementar soluciones tecnológicas innovadoras.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+
+                    <!-- Ingeniería Civil -->
+                    <div class="program-card-detail" data-level="pregrado">
+                        <div class="program-header-detail">
+                            <h3>Ingeniería Civil</h3>
+                            <p class="program-degree">Título: Ingeniero Civil</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>10 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 SNIES:</span>
+                                <span>1570</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Profesionales en diseño, construcción y gestión de proyectos de infraestructura civil.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+
+                    <!-- Ingeniería Ambiental -->
+                    <div class="program-card-detail" data-level="pregrado">
+                        <div class="program-header-detail">
+                            <h3>Ingeniería Ambiental y Sanitaria</h3>
+                            <p class="program-degree">Título: Ingeniero Ambiental y Sanitario</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>10 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 SNIES:</span>
+                                <span>12345</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Gestión sostenible del medio ambiente y desarrollo de soluciones ambientales.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facultad de Ciencias de la Salud -->
+            <div class="faculty-section" data-faculty="salud">
+                <h2 class="faculty-title">
+                    <span class="faculty-icon">🏥</span>
+                    Facultad de Ciencias de la Salud
+                </h2>
+                
+                <div class="programs-grid">
+                    <!-- Medicina -->
+                    <div class="program-card-detail" data-level="pregrado">
+                        <div class="program-header-detail">
+                            <div class="program-badge badge-featured">Destacado</div>
+                            <h3>Medicina</h3>
+                            <p class="program-degree">Título: Médico Cirujano</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>12 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 SNIES:</span>
+                                <span>54321</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Formación integral en ciencias médicas con énfasis en atención primaria en salud.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+
+                    <!-- Enfermería -->
+                    <div class="program-card-detail" data-level="pregrado">
+                        <div class="program-header-detail">
+                            <h3>Enfermería</h3>
+                            <p class="program-degree">Título: Enfermero</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>10 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 SNIES:</span>
+                                <span>2468</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Cuidado integral de la salud con enfoque humanístico y científico.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+
+                    <!-- Fisioterapia -->
+                    <div class="program-card-detail" data-level="pregrado">
+                        <div class="program-header-detail">
+                            <div class="program-badge badge-new">Nuevo</div>
+                            <h3>Fisioterapia</h3>
+                            <p class="program-degree">Título: Fisioterapeuta</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>10 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 SNIES:</span>
+                                <span>113456</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Rehabilitación funcional y promoción de la salud a través del movimiento corporal.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facultad de Ciencias Económicas y Administrativas -->
+            <div class="faculty-section" data-faculty="economicas">
+                <h2 class="faculty-title">
+                    <span class="faculty-icon">💼</span>
+                    Facultad de Ciencias Económicas y Administrativas
+                </h2>
+                
+                <div class="programs-grid">
+                    <!-- Administración de Empresas -->
+                    <div class="program-card-detail" data-level="pregrado">
+                        <div class="program-header-detail">
+                            <h3>Administración de Empresas</h3>
+                            <p class="program-degree">Título: Administrador de Empresas</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>10 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 SNIES:</span>
+                                <span>3690</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Gestión empresarial con visión estratégica e innovadora para el desarrollo organizacional.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+
+                    <!-- Contaduría Pública -->
+                    <div class="program-card-detail" data-level="pregrado">
+                        <div class="program-header-detail">
+                            <h3>Contaduría Pública</h3>
+                            <p class="program-degree">Título: Contador Público</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>10 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 SNIES:</span>
+                                <span>1572</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Expertos en información financiera, auditoría y gestión contable empresarial.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+
+                    <!-- Maestría en Logística -->
+                    <div class="program-card-detail" data-level="maestria">
+                        <div class="program-header-detail">
+                            <div class="program-badge badge-new">Nuevo</div>
+                            <h3>Maestría en Logística y Gestión de la Cadena de Abastecimiento</h3>
+                            <p class="program-degree">Título: Magíster</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>4 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 Resolución:</span>
+                                <span>001287</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Formación avanzada en optimización de procesos logísticos y cadenas de suministro.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facultad de Derecho -->
+            <div class="faculty-section" data-faculty="derecho">
+                <h2 class="faculty-title">
+                    <span class="faculty-icon">⚖️</span>
+                    Facultad de Derecho y Ciencias Políticas
+                </h2>
+                
+                <div class="programs-grid">
+                    <!-- Derecho -->
+                    <div class="program-card-detail" data-level="pregrado">
+                        <div class="program-header-detail">
+                            <h3>Derecho</h3>
+                            <p class="program-degree">Título: Abogado</p>
+                        </div>
+                        <div class="program-info">
+                            <div class="info-item">
+                                <span class="info-label">📅 Duración:</span>
+                                <span>10 semestres</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🏛️ Modalidad:</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📍 Sede:</span>
+                                <span>Valledupar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📋 SNIES:</span>
+                                <span>1575</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Formación jurídica integral con énfasis en justicia social y derechos humanos.
+                        </p>
+                        <div class="program-actions">
+                            <a href="#" class="btn-detail">Ver más información</a>
+                            <a href="#" class="btn-apply">Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="programs-cta">
+        <div class="container">
+            <h2>¿Necesitas más información?</h2>
+            <p>Nuestros asesores están listos para ayudarte a elegir el programa ideal</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Solicitar Asesoría</a>
+                <a href="#" class="btn btn-secondary">Descargar Folleto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://i.imgur.com/YrKQZJH.png" alt="Logo UNICESAR" class="footer-logo-img">
+                <p>Universidad Popular del Cesar</p>
+                <p>Institución pública de educación superior del orden nacional</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">ig</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Sedes</h3>
+                <p>📍 <strong>Sede Sabanas</strong><br>Diagonal 21 No. 29-56<br>Valledupar, Cesar</p>
+                <p>📍 <strong>Sede Hurtado</strong><br>Balneario Hurtado<br>Vía a Patillal</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📞 PBX: +57 (605) 588-5592</p>
+                <p>📧 pqrs@unicesar.edu.co</p>
+                <p>📧 info@unicesar.edu.co</p>
+                <p>🕐 Lunes a Viernes<br>8:00 am - 12:00 m | 2:00 pm - 6:00 pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="#">Portal Estudiantil</a>
+                <a href="#">Transparencia y Acceso</a>
+                <a href="#">PQRS</a>
+                <a href="#">Políticas Institucionales</a>
+                <a href="#">Bienestar Universitario</a>
+                <a href="#">Admisiones</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Universidad Popular del Cesar - Todos los derechos reservados | NIT: 892.200.365-4</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filtro por nivel
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const programCards = document.querySelectorAll('.program-card-detail');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const level = btn.dataset.level;
+                
+                programCards.forEach(card => {
+                    if (level === 'pregrado' && !card.dataset.level) {
+                        card.style.display = 'block';
+                    } else if (card.dataset.level === level) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Búsqueda
+        const searchInput = document.getElementById('programSearch');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            programCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('.program-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Filtro por facultad
+        const facultyFilter = document.getElementById('facultyFilter');
+        facultyFilter.addEventListener('change', (e) => {
+            const faculty = e.target.value;
+            const facultySections = document.querySelectorAll('.faculty-section');
+            
+            facultySections.forEach(section => {
+                if (faculty === 'todas' || section.dataset.faculty === faculty) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

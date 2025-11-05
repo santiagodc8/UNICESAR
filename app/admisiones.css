@@ -1,0 +1,678 @@
+/* ============================================
+   CSS PARA PÁGINA DE ADMISIONES
+   ============================================ */
+
+/* Hero Admisiones */
+.admissions-hero {
+    background: linear-gradient(135deg, #0A7338 0%, #57A641 100%);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.admissions-hero::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(242, 204, 12, 0.1);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+}
+
+.admissions-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.admissions-hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-stats-admissions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    min-width: 250px;
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.stat-box p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Calendario Timeline */
+.admission-calendar {
+    padding: 5rem 2rem;
+    background: #F2F2F2;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #0A7338, #57A641);
+}
+
+.timeline-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-marker {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0A7338 0%, #57A641 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(10, 115, 56, 0.3);
+    z-index: 1;
+}
+
+.timeline-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-content h3 {
+    color: #0A7338;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-date {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.timeline-link {
+    color: #0A7338;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.timeline-link:hover {
+    color: #57A641;
+    gap: 1rem;
+}
+
+/* Requisitos de Admisión */
+.admission-requirements {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.requirements-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.req-tab {
+    padding: 1rem 2.5rem;
+    border: none;
+    background: #F2F2F2;
+    color: #333;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+}
+
+.req-tab:hover {
+    background: #57A641;
+    color: white;
+}
+
+.req-tab.active {
+    background: #0A7338;
+    color: white;
+    box-shadow: 0 4px 15px rgba(10, 115, 56, 0.3);
+}
+
+.requirements-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.requirements-content.active {
+    display: block;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.requirement-card {
+    background: #F8F9FA;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+.requirement-card:hover {
+    border-color: #57A641;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.req-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.requirement-card h3 {
+    color: #0A7338;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.requirement-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.requirement-card ul li {
+    padding: 0.5rem 0;
+    color: #666;
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.requirement-card ul li::before {
+    content: '✓';
+    color: #57A641;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Pasos de Inscripción */
+.enrollment-steps {
+    padding: 5rem 2rem;
+    background: #F2F2F2;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #0A7338, #57A641);
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0A7338 0%, #57A641 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(10, 115, 56, 0.3);
+}
+
+.step-card h3 {
+    color: #0A7338;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.step-card p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.step-link {
+    color: #0A7338;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.step-link:hover {
+    color: #57A641;
+    gap: 1rem;
+}
+
+/* Beneficios y Becas */
+.benefits-section {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefit-card {
+    background: linear-gradient(to bottom, #F8F9FA 0%, white 100%);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+.benefit-card:hover {
+    border-color: #F2CC0C;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(242, 204, 12, 0.2);
+}
+
+.benefit-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card h3 {
+    color: #0A7338;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-list li {
+    padding: 0.5rem 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Preguntas Frecuentes */
+.faq-section {
+    padding: 5rem 2rem;
+    background: #F2F2F2;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.faq-item:hover {
+    border-color: #57A641;
+}
+
+.faq-question {
+    color: #0A7338;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.faq-question::before {
+    content: '❓';
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.faq-answer {
+    color: #666;
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    margin-top: 1rem;
+}
+
+/* CTA Final */
+.final-cta {
+    background: linear-gradient(135deg, #0A7338 0%, #57A641 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.btn-large {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+}
+
+.contact-info-cta {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-icon {
+    font-size: 2rem;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item {
+    animation: fadeIn 0.5s ease;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+.timeline-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-stats-admissions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .stat-box {
+        min-width: auto;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-marker {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .timeline-item {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .admissions-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .admissions-hero p {
+        font-size: 1.1rem;
+    }
+
+    .requirements-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .req-tab {
+        width: 100%;
+    }
+
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .timeline-marker {
+        margin: 0 auto;
+    }
+
+    .contact-info-cta {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-large {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .admissions-hero {
+        padding: 3rem 1rem 2rem;
+    }
+
+    .admissions-hero h1 {
+        font-size: 2rem;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .final-cta h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header-top,
+    .nav-menu,
+    .final-cta,
+    footer {
+        display: none;
+    }
+
+    .timeline-item,
+    .requirement-card,
+    .step-card {
+        page-break-inside: avoid;
+    }
+}
+
+/* Mejoras de accesibilidad */
+.req-tab:focus,
+.faq-item:focus,
+.step-link:focus,
+.timeline-link:focus {
+    outline: 3px solid #F2CC0C;
+    outline-offset: 2px;
+}

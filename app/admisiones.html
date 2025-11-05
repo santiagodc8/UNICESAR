@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admisiones - Universidad Popular del Cesar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admisiones.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="header-top">
+        <div class="header-top-content">
+            <div>📞 PBX: +57 (605) 588-5592 | 📧 info@unicesar.edu.co</div>
+            <div class="header-top-links">
+                <a href="#">Transparencia</a>
+                <a href="#">PQRS</a>
+                <a href="#">Correo Institucional</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Logo UNICESAR" class="logo-img">
+                <div class="logo-text">
+                    <h1>Universidad Popular del Cesar</h1>
+                    <p>UNICESAR</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="admisiones.html" style="color: #0A7338; font-weight: 700;">Admisiones</a></li>
+                <li><a href="#investigacion">Investigación</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a class="btn-portal" href="#">Portal Estudiantil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Admisiones -->
+    <section class="admissions-hero">
+        <div class="container">
+            <h1>Proceso de Admisiones</h1>
+            <p>Tu camino hacia una educación de calidad comienza aquí</p>
+            <div class="hero-stats-admissions">
+                <div class="stat-box">
+                    <span class="stat-icon">📅</span>
+                    <div>
+                        <strong>Inscripciones Abiertas</strong>
+                        <p>Periodo 2025-II</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-icon">🎓</span>
+                    <div>
+                        <strong>35+ Programas</strong>
+                        <p>Pregrado y Posgrado</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-icon">💰</span>
+                    <div>
+                        <strong>Universidad Pública</strong>
+                        <p>Educación accesible</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendario de Admisiones -->
+    <section class="admission-calendar">
+        <div class="container">
+            <h2 class="section-title">Calendario de Admisiones 2025-II</h2>
+            <p class="section-subtitle">Fechas importantes que debes conocer</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Inscripciones</h3>
+                        <p class="timeline-date">📅 Agosto 15 - Septiembre 30, 2025</p>
+                        <p>Registro en línea y presentación de documentos requeridos para admisión.</p>
+                        <a href="#" class="timeline-link">Inscribirme ahora →</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Prueba de Admisión</h3>
+                        <p class="timeline-date">📅 Octubre 15, 2025</p>
+                        <p>Aplicación de examen de conocimientos y competencias según el programa elegido.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Resultados</h3>
+                        <p class="timeline-date">📅 Octubre 25, 2025</p>
+                        <p>Publicación de listados de admitidos en el portal web y notificación por correo.</p>
+                        <a href="#" class="timeline-link">Consultar resultados →</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>Matrícula</h3>
+                        <p class="timeline-date">📅 Noviembre 1 - 15, 2025</p>
+                        <p>Proceso de matrícula académica y financiera para estudiantes admitidos.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h3>Inicio de Clases</h3>
+                        <p class="timeline-date">📅 Enero 20, 2026</p>
+                        <p>Jornada de inducción y bienvenida. Inicio oficial del semestre académico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requisitos de Admisión -->
+    <section class="admission-requirements">
+        <div class="container">
+            <h2 class="section-title">Requisitos de Admisión</h2>
+            
+            <div class="requirements-tabs">
+                <button class="req-tab active" data-level="pregrado">Pregrado</button>
+                <button class="req-tab" data-level="posgrado">Posgrado</button>
+                <button class="req-tab" data-level="transferencia">Transferencia</button>
+            </div>
+
+            <!-- Requisitos Pregrado -->
+            <div class="requirements-content active" id="pregrado">
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <div class="req-icon">📄</div>
+                        <h3>Documento de Identidad</h3>
+                        <ul>
+                            <li>Cédula de ciudadanía o tarjeta de identidad</li>
+                            <li>Fotocopia ampliada al 150%</li>
+                            <li>Documento vigente y legible</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">🎓</div>
+                        <h3>Título de Bachiller</h3>
+                        <ul>
+                            <li>Diploma de bachiller o acta de grado</li>
+                            <li>Certificación de notas de 10° y 11°</li>
+                            <li>Documentos debidamente autenticados</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">📊</div>
+                        <h3>Prueba Saber 11</h3>
+                        <ul>
+                            <li>Resultados de examen ICFES</li>
+                            <li>Presentado en los últimos 5 años</li>
+                            <li>Impresión desde portal ICFES</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">📸</div>
+                        <h3>Fotografía Reciente</h3>
+                        <ul>
+                            <li>2 fotos tipo documento 3x4 cm</li>
+                            <li>Fondo blanco, formal</li>
+                            <li>Recientes (últimos 3 meses)</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">🏥</div>
+                        <h3>Documentos Adicionales</h3>
+                        <ul>
+                            <li>Certificado de afiliación EPS</li>
+                            <li>Registro civil de nacimiento</li>
+                            <li>Certificado militar (hombres mayores)</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">💳</div>
+                        <h3>Pago de Inscripción</h3>
+                        <ul>
+                            <li>Comprobante de pago</li>
+                            <li>Valor: 1 SMLV</li>
+                            <li>Consultar descuentos disponibles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Requisitos Posgrado -->
+            <div class="requirements-content" id="posgrado">
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <div class="req-icon">🎓</div>
+                        <h3>Título Profesional</h3>
+                        <ul>
+                            <li>Diploma de pregrado</li>
+                            <li>Acta de grado autenticada</li>
+                            <li>Certificaciones académicas</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">📝</div>
+                        <h3>Hoja de Vida</h3>
+                        <ul>
+                            <li>CV académico actualizado</li>
+                            <li>Experiencia profesional</li>
+                            <li>Referencias laborales</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">✍️</div>
+                        <h3>Carta de Intención</h3>
+                        <ul>
+                            <li>Motivación para el programa</li>
+                            <li>Objetivos académicos</li>
+                            <li>Máximo 2 páginas</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">🗣️</div>
+                        <h3>Entrevista</h3>
+                        <ul>
+                            <li>Entrevista con comité académico</li>
+                            <li>Evaluación de perfil</li>
+                            <li>Fecha según cronograma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Requisitos Transferencia -->
+            <div class="requirements-content" id="transferencia">
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <div class="req-icon">📚</div>
+                        <h3>Certificaciones Académicas</h3>
+                        <ul>
+                            <li>Calificaciones de semestres cursados</li>
+                            <li>Programa de estudios (syllabus)</li>
+                            <li>Documento de universidad origen</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">✅</div>
+                        <h3>Paz y Salvo</h3>
+                        <ul>
+                            <li>Certificado de paz y salvo académico</li>
+                            <li>Paz y salvo financiero</li>
+                            <li>Universidad de origen</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card">
+                        <div class="req-icon">🔄</div>
+                        <h3>Homologación</h3>
+                        <ul>
+                            <li>Solicitud de homologación</li>
+                            <li>Contenidos programáticos</li>
+                            <li>Evaluación por comité</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pasos para Inscribirse -->
+    <section class="enrollment-steps">
+        <div class="container">
+            <h2 class="section-title">¿Cómo Inscribirme?</h2>
+            <p class="section-subtitle">Sigue estos sencillos pasos</p>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Registro en Línea</h3>
+                    <p>Crea tu cuenta en el portal de admisiones con tus datos personales y correo electrónico activo.</p>
+                    <a href="#" class="step-link">Ir al portal →</a>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Selecciona tu Programa</h3>
+                    <p>Elige hasta 3 opciones de programa académico según tu preferencia e intereses.</p>
+                    <a href="programas.html" class="step-link">Ver programas →</a>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Realiza el Pago</h3>
+                    <p>Genera el recibo de pago y cancela el valor de inscripción en los bancos autorizados.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Carga Documentos</h3>
+                    <p>Sube todos los documentos requeridos en formato PDF a través del portal de admisiones.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3>Presenta la Prueba</h3>
+                    <p>Asiste el día indicado a presentar tu examen de admisión en la sede asignada.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h3>Consulta Resultados</h3>
+                    <p>Verifica si fuiste admitido consultando los listados publicados en nuestra página web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios y Becas -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Beneficios y Apoyos Financieros</h2>
+            <p class="section-subtitle">Facilitamos tu acceso a la educación superior</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Becas por Mérito Académico</h3>
+                    <p>Para estudiantes con excelentes resultados en pruebas Saber 11. Descuentos de hasta el 100% en matrícula.</p>
+                    <ul class="benefit-list">
+                        <li>✓ Puntaje superior a 350</li>
+                        <li>✓ Renovable cada semestre</li>
+                        <li>✓ Según disponibilidad presupuestal</li>
+                    </ul>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Apoyo Socioeconómico</h3>
+                    <p>Descuentos y apoyos para estudiantes de estratos 1 y 2 y situaciones especiales.</p>
+                    <ul class="benefit-list">
+                        <li>✓ Evaluación socioeconómica</li>
+                        <li>✓ Subsidios de alimentación</li>
+                        <li>✓ Transporte y materiales</li>
+                    </ul>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎖️</div>
+                    <h3>Cupos Especiales</h3>
+                    <p>Cupos reservados para población vulnerable, víctimas del conflicto y comunidades indígenas.</p>
+                    <ul class="benefit-list">
+                        <li>✓ Víctimas del conflicto armado</li>
+                        <li>✓ Mejores bachilleres municipales</li>
+                        <li>✓ Población NARP</li>
+                    </ul>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💳</div>
+                    <h3>Créditos ICETEX</h3>
+                    <p>Convenio con ICETEX para financiación de matrícula y sostenimiento con condiciones preferenciales.</p>
+                    <ul class="benefit-list">
+                        <li>✓ Tasas de interés subsidiadas</li>
+                        <li>✓ Largos plazos de pago</li>
+                        <li>✓ Asesoría personalizada</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="btn btn-primary">Consultar Becas Disponibles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Cuál es el costo de la matrícula?</h3>
+                    <p class="faq-answer">El costo varía según el estrato socioeconómico, desde $200.000 hasta $1.500.000 por semestre. Existen múltiples opciones de becas y apoyos financieros.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Puedo inscribirme a varios programas?</h3>
+                    <p class="faq-answer">Sí, puedes seleccionar hasta 3 opciones de programa en orden de preferencia al momento de tu inscripción.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Qué pasa si no paso la prueba de admisión?</h3>
+                    <p class="faq-answer">Puedes presentarte nuevamente en el siguiente periodo de admisiones. El proceso de inscripción es semestral.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Ofrecen programas virtuales?</h3>
+                    <p class="faq-answer">Sí, contamos con programas en modalidad presencial, virtual y a distancia. Consulta la oferta académica disponible.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Hay cupos para personas mayores de 30 años?</h3>
+                    <p class="faq-answer">Sí, no hay límite de edad para ingresar a la universidad. Valoramos la educación continua y el desarrollo profesional.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Puedo transferirme desde otra universidad?</h3>
+                    <p class="faq-answer">Sí, aceptamos transferencias internas y externas. Debes cumplir requisitos adicionales y proceso de homologación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>¿Listo para Comenzar tu Futuro?</h2>
+            <p>No esperes más, inicia tu proceso de admisión hoy</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary btn-large">Inscribirme Ahora</a>
+                <a href="#" class="btn btn-secondary btn-large">Descargar Guía de Admisión</a>
+            </div>
+            <div class="contact-info-cta">
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <strong>Línea de Atención</strong>
+                        <p>+57 (605) 588-5592 Ext. 1234</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <strong>Correo Admisiones</strong>
+                        <p>admisiones@unicesar.edu.co</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <p>+57 310 123 4567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://i.imgur.com/YrKQZJH.png" alt="Logo UNICESAR" class="footer-logo-img">
+                <p>Universidad Popular del Cesar</p>
+                <p>Institución pública de educación superior del orden nacional</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">ig</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Sedes</h3>
+                <p>📍 <strong>Sede Sabanas</strong><br>Diagonal 21 No. 29-56<br>Valledupar, Cesar</p>
+                <p>📍 <strong>Sede Hurtado</strong><br>Balneario Hurtado<br>Vía a Patillal</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📞 PBX: +57 (605) 588-5592</p>
+                <p>📧 pqrs@unicesar.edu.co</p>
+                <p>📧 info@unicesar.edu.co</p>
+                <p>🕐 Lunes a Viernes<br>8:00 am - 12:00 m | 2:00 pm - 6:00 pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="#">Portal Estudiantil</a>
+                <a href="#">Transparencia y Acceso</a>
+                <a href="#">PQRS</a>
+                <a href="#">Políticas Institucionales</a>
+                <a href="#">Bienestar Universitario</a>
+                <a href="#">Admisiones</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Universidad Popular del Cesar - Todos los derechos reservados | NIT: 892.200.365-4</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tabs de requisitos
+        const reqTabs = document.querySelectorAll('.req-tab');
+        const reqContents = document.querySelectorAll('.requirements-content');
+
+        reqTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                reqTabs.forEach(t => t.classList.remove('active'));
+                reqContents.forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.level).classList.add('active');
+            });
+        });
+
+        // Acordeón FAQ
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
