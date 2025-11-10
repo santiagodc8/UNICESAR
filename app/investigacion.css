@@ -1,0 +1,732 @@
+/* ============================================
+   CSS PARA PÁGINA DE INVESTIGACIÓN
+   ============================================ */
+
+/* Hero Investigación */
+.research-hero {
+    background: linear-gradient(135deg, #0A7338 0%, #57A641 100%);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.research-hero::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(242, 204, 12, 0.1);
+    border-radius: 50%;
+    top: -250px;
+    left: -250px;
+}
+
+.research-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.research-hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.research-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.stat-num {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #F2CC0C;
+    margin-bottom: 0.5rem;
+}
+
+.stat-text {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+/* Sobre la Investigación */
+.about-research {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #0A7338;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.mv-card {
+    background: #F8F9FA;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #57A641;
+}
+
+.mv-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #0A7338;
+}
+
+.mv-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+.about-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Líneas de Investigación */
+.research-lines {
+    padding: 5rem 2rem;
+    background: #F2F2F2;
+}
+
+.lines-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.line-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.line-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.line-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.line-card h3 {
+    font-size: 1.5rem;
+    color: #0A7338;
+    margin-bottom: 1.5rem;
+}
+
+.line-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.line-card ul li {
+    padding: 0.6rem 0;
+    color: #666;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.line-card ul li:last-child {
+    border-bottom: none;
+}
+
+.line-card ul li::before {
+    content: '▸';
+    color: #57A641;
+    font-weight: bold;
+}
+
+/* Grupos de Investigación */
+.research-groups {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.groups-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.group-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.group-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.group-header {
+    background: linear-gradient(135deg, #0A7338 0%, #57A641 100%);
+    color: white;
+    padding: 2rem;
+    position: relative;
+}
+
+.group-category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cat-a {
+    background: #F2CC0C;
+    color: #1a1a1a;
+}
+
+.cat-b {
+    background: #FFD700;
+    color: #1a1a1a;
+}
+
+.cat-avalado {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.group-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.group-area {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.group-body {
+    padding: 2rem;
+    flex: 1;
+}
+
+.group-body p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.group-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.group-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.group-footer {
+    padding: 0 2rem 2rem;
+}
+
+.group-link {
+    color: #0A7338;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.group-link:hover {
+    color: #57A641;
+    gap: 1rem;
+}
+
+/* Semilleros */
+.seedbeds-section {
+    padding: 5rem 2rem;
+    background: #F2F2F2;
+}
+
+.seedbeds-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.seedbeds-text h3 {
+    font-size: 2rem;
+    color: #0A7338;
+    margin-bottom: 1.5rem;
+}
+
+.seedbeds-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.benefits-list h4 {
+    font-size: 1.3rem;
+    color: #0A7338;
+    margin-bottom: 1rem;
+}
+
+.benefits-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list ul li {
+    padding: 0.8rem 0;
+    color: #666;
+    font-size: 1.05rem;
+}
+
+.seedbeds-stats {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.seedbed-stat {
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 2px solid #F2F2F2;
+}
+
+.seedbed-stat:last-child {
+    border-bottom: none;
+}
+
+.seedbed-num {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0A7338;
+    margin-bottom: 0.5rem;
+}
+
+.seedbed-label {
+    display: block;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Convocatorias */
+.calls-section {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.calls-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.call-card {
+    background: #F8F9FA;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.call-card:hover {
+    border-color: #57A641;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.call-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.call-badge.active {
+    background: #57A641;
+    color: white;
+}
+
+.call-badge.closed {
+    background: #999;
+    color: white;
+}
+
+.call-card h3 {
+    font-size: 1.5rem;
+    color: #0A7338;
+    margin-bottom: 1rem;
+}
+
+.call-date {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.call-card p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.call-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.call-details span {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.btn-call {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #0A7338;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-call:hover {
+    background: #57A641;
+    transform: translateX(5px);
+}
+
+.btn-call.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-call.disabled:hover {
+    transform: none;
+}
+
+/* Publicaciones */
+.publications-section {
+    padding: 5rem 2rem;
+    background: #F2F2F2;
+}
+
+.publications-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.pub-stat {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.pub-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.pub-icon {
+    font-size: 3rem;
+}
+
+.pub-num {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0A7338;
+}
+
+.pub-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.publication-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pub-link-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+.pub-link-card:hover {
+    border-color: #57A641;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pub-link-card h3 {
+    color: #0A7338;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.pub-link-card p {
+    color: #666;
+}
+
+/* CTA Investigadores */
+.researchers-cta {
+    background: linear-gradient(135deg, #0A7338 0%, #57A641 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.researchers-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.researchers-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.contact-research {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-research p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .research-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .lines-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .groups-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seedbeds-content {
+        grid-template-columns: 1fr;
+    }
+
+    .publications-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .publication-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .research-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .research-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .lines-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .groups-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calls-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .publications-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .research-hero {
+        padding: 3rem 1rem 2rem;
+    }
+
+    .research-hero h1 {
+        font-size: 2rem;
+    }
+
+    .researchers-cta h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.group-card,
+.line-card,
+.call-card {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Print styles */
+@media print {
+    .header-top,
+    .nav-menu,
+    .researchers-cta,
+    footer {
+        display: none;
+    }
+}
+
+/* Accesibilidad */
+.group-link:focus,
+.btn-call:focus,
+.pub-link-card:focus {
+    outline: 3px solid #F2CC0C;
+    outline-offset: 2px;
+}
