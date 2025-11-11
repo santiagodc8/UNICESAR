@@ -856,27 +856,31 @@ footer {
 }
 
 .footer-social {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center; /* centra verticalmente los íconos */
+  margin-top: 0; /* puedes quitar el margin-top si ya está dentro del footer */
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s;
+  color: white;
+  background-color: #0A7338; /* verde unicesar */
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
+/* Efecto hover */
 .social-icon:hover {
-    background: var(--verde-medio);
-    transform: translateY(-3px);
+  background-color: #57A641;
+  transform: scale(1.1);
 }
 
 .footer-bottom {
