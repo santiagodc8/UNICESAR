@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniería de Sistemas - Universidad Popular del Cesar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        .header-top {
+            background: #0A7338;
+            color: white;
+            padding: 0.8rem 0;
+            font-size: 0.9rem;
+        }
+
+        .header-top-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+        height: 70px;
+        width: auto;
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            color: #0A7338;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #0A7338;
+        }
+
+        .btn-portal {
+            background: #F2CC0C;
+            color: #1a1a1a;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(10, 115, 56, 0.95), rgba(87, 166, 65, 0.95)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%230A7338" width="1200" height="400"/><path fill="%2357A641" opacity="0.3" d="M0,200 Q300,100 600,200 T1200,200 L1200,400 L0,400 Z"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 5rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .badge.highlight {
+            background: #F2CC0C;
+            color: #1a1a1a;
+            border-color: #F2CC0C;
+        }
+
+        /* Quick Info */
+        .quick-info {
+            background: white;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            max-width: 1000px;
+            margin: -3rem auto 0;
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-box {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .info-box i {
+            font-size: 2.5rem;
+            color: #0A7338;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box h3 {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .info-box p {
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #0A7338;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section h2 i {
+            font-size: 1.8rem;
+        }
+
+        .section-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Perfil Boxes */
+        .perfil-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .perfil-box {
+            background: #F8F9FA;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #0A7338;
+        }
+
+        .perfil-box h4 {
+            color: #0A7338;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .perfil-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .perfil-box li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .perfil-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #57A641;
+            font-weight: bold;
+        }
+
+        /* Plan de Estudios */
+        .semestre {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .semestre h4 {
+            color: #0A7338;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #57A641;
+        }
+
+        .materias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .materia {
+            background: #F8F9FA;
+            padding: 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .materia:hover {
+            background: #0A7338;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #0A7338, #57A641);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .cta-box h3 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #0A7338;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-top: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #0A7338;
+        }
+
+        .info-list {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .info-list h4 {
+            color: #0A7338;
+            margin-bottom: 1rem;
+        }
+
+        .info-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list i {
+            color: #57A641;
+        }
+
+        /* Lineas de Investigación */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .research-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .research-card:hover {
+            border-color: #0A7338;
+            box-shadow: 0 8px 25px rgba(10, 115, 56, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .research-card h4 {
+            color: #0A7338;
+            margin-bottom: 0.8rem;
+        }
+
+        .research-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #57A641;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-logo-img {
+        height: 80px;
+        width: auto;
+        margin-bottom: 1rem;
+        filter: brightness(0) invert(1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-info {
+                grid-template-columns: 1fr;
+                margin: -2rem 1rem 0;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .materias-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="header-top">
+        <div class="header-top-content">
+            <div>📞 PBX: +57 (605) 588-5592 | 📧 info@unicesar.edu.co</div>
+            <div class="header-top-links">
+                <a href="#">Transparencia</a>
+                <a href="#">PQRS</a>
+                <a href="#">Correo Institucional</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Logo UNICESAR" class="logo-img">
+                <div class="logo-text">
+                    <h1>Universidad Popular del Cesar</h1>
+                    <p>UNICESAR</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="admisiones.html">Admisiones</a></li>
+                <li><a href="investigacion.html">Investigación</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a class="btn-portal" href="#">Portal Estudiantil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ingeniería de Sistemas</h1>
+            <p>Forma profesionales capaces de diseñar, desarrollar e implementar soluciones tecnológicas innovadoras para transformar empresas y sociedades</p>
+            <div class="hero-badges">
+                <span class="badge highlight">✓ Programa Acreditado</span>
+                <span class="badge">10 Semestres</span>
+                <span class="badge">Modalidad Presencial</span>
+                <span class="badge">SNIES: 1568</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <div class="container">
+        <div class="quick-info">
+            <div class="info-box">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Título que otorga</h3>
+                <p>Ingeniero de Sistemas</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Duración</h3>
+                <p>10 Semestres</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-building"></i>
+                <h3>Modalidad</h3>
+                <p>Presencial</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Sede</h3>
+                <p>Valledupar</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="two-column">
+            <div>
+                <!-- Presentación -->
+                <section class="section">
+                    <h2><i class="fas fa-info-circle"></i> Presentación del Programa</h2>
+                    <div class="section-content">
+                        <p style="margin-bottom: 1rem;">El programa de Ingeniería de Sistemas de la Universidad Popular del Cesar forma profesionales con sólidas competencias técnicas, científicas y humanas, capaces de liderar procesos de transformación digital en organizaciones de diversos sectores.</p>
+                        
+                        <p style="margin-bottom: 1rem;">Nuestros estudiantes desarrollan habilidades en desarrollo de software, gestión de tecnologías de información, análisis de datos, inteligencia artificial, ciberseguridad y gestión de proyectos tecnológicos, preparándolos para enfrentar los desafíos del mundo digital actual.</p>
+
+                        <p>El programa cuenta con acreditación de alta calidad, laboratorios especializados, convenios con empresas del sector TI y un cuerpo docente altamente calificado con experiencia en la industria.</p>
+                    </div>
+                </section>
+
+                <!-- Objetivo -->
+                <section class="section">
+                    <h2><i class="fas fa-bullseye"></i> Objetivo del Programa</h2>
+                    <div class="section-content">
+                        <p>Formar ingenieros de sistemas integrales con capacidad para analizar, diseñar, desarrollar, implementar y gestionar soluciones tecnológicas innovadoras que aporten al desarrollo económico y social de la región y el país, fundamentados en principios éticos, responsabilidad social y compromiso con la excelencia profesional.</p>
+                    </div>
+                </section>
+
+                <!-- Perfiles -->
+                <section class="section">
+                    <h2><i class="fas fa-user-graduate"></i> Perfiles</h2>
+                    
+                    <div class="perfil-grid">
+                        <div class="perfil-box">
+                            <h4><i class="fas fa-arrow-right"></i> Perfil de Ingreso</h4>
+                            <ul>
+                                <li>Interés por la tecnología e innovación</li>
+                                <li>Pensamiento lógico y analítico</li>
+                                <li>Habilidades matemáticas</li>
+                                <li>Capacidad de resolución de problemas</li>
+                                <li>Creatividad e innovación</li>
+                                <li>Trabajo en equipo</li>
+                            </ul>
+                        </div>
+
+                        <div class="perfil-box">
+                            <h4><i class="fas fa-check-circle"></i> Perfil de Egreso</h4>
+                            <ul>
+                                <li>Diseñar arquitecturas de software robustas</li>
+                                <li>Desarrollar aplicaciones multiplataforma</li>
+                                <li>Gestionar proyectos tecnológicos</li>
+                                <li>Administrar infraestructura TI</li>
+                                <li>Analizar y procesar datos</li>
+                                <li>Implementar soluciones de IA</li>
+                                <li>Garantizar ciberseguridad</li>
+                            </ul>
+                        </div>
+
+                        <div class="perfil-box">
+                            <h4><i class="fas fa-briefcase"></i> Perfil Ocupacional</h4>
+                            <ul>
+                                <li>Desarrollador de Software</li>
+                                <li>Arquitecto de Soluciones</li>
+                                <li>Gestor de Proyectos TI</li>
+                                <li>Analista de Datos/BI</li>
+                                <li>Especialista en Ciberseguridad</li>
+                                <li>Consultor Tecnológico</li>
+                                <li>Emprendedor Digital</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Plan de Estudios -->
+                <section class="section">
+                    <h2><i class="fas fa-book"></i> Plan de Estudios</h2>
+                    
+                    <div class="semestre">
+                        <h4>Primer Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Cálculo Diferencial</div>
+                            <div class="materia">Álgebra Lineal</div>
+                            <div class="materia">Introducción a la Ingeniería</div>
+                            <div class="materia">Fundamentos de Programación</div>
+                            <div class="materia">Competencias Comunicativas</div>
+                            <div class="materia">Física I</div>
+                        </div>
+                    </div>
+
+                    <div class="semestre">
+                        <h4>Segundo Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Cálculo Integral</div>
+                            <div class="materia">Matemáticas Discretas</div>
+                            <div class="materia">Programación Orientada a Objetos</div>
+                            <div class="materia">Estructura de Datos</div>
+                            <div class="materia">Física II</div>
+                            <div class="materia">Constitución Política</div>
+                        </div>
+                    </div>
+
+                    <div class="semestre">
+                        <h4>Tercer Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Cálculo Multivariable</div>
+                            <div class="materia">Probabilidad y Estadística</div>
+                            <div class="materia">Algoritmos y Complejidad</div>
+                            <div class="materia">Bases de Datos I</div>
+                            <div class="materia">Arquitectura de Computadores</div>
+                            <div class="materia">Electiva Humanística I</div>
+                        </div>
+                    </div>
+
+                    <div class="semestre">
+                        <h4>Cuarto Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Ecuaciones Diferenciales</div>
+                            <div class="materia">Métodos Numéricos</div>
+                            <div class="materia">Bases de Datos II</div>
+                            <div class="materia">Programación Web</div>
+                            <div class="materia">Sistemas Operativos</div>
+                            <div class="materia">Ingeniería de Software I</div>
+                        </div>
+                    </div>
+
+                    <div class="semestre">
+                        <h4>Quinto Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Investigación de Operaciones</div>
+                            <div class="materia">Ingeniería de Software II</div>
+                            <div class="materia">Redes de Computadores</div>
+                            <div class="materia">Desarrollo Móvil</div>
+                            <div class="materia">Análisis y Diseño de Sistemas</div>
+                            <div class="materia">Electiva Humanística II</div>
+                        </div>
+                    </div>
+
+                    <div class="semestre">
+                        <h4>Sexto Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Gestión de Proyectos TI</div>
+                            <div class="materia">Arquitectura de Software</div>
+                            <div class="materia">Inteligencia Artificial</div>
+                            <div class="materia">Seguridad Informática</div>
+                            <div class="materia">Bases de Datos Avanzadas</div>
+                            <div class="materia">Emprendimiento</div>
+                        </div>
+                    </div>
+
+                    <div class="semestre">
+                        <h4>Séptimo Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Machine Learning</div>
+                            <div class="materia">Computación en la Nube</div>
+                            <div class="materia">Auditoría de Sistemas</div>
+                            <div class="materia">Gestión de Servicios TI</div>
+                            <div class="materia">Electiva Técnica I</div>
+                            <div class="materia">Ética Profesional</div>
+                        </div>
+                    </div>
+
+                    <div class="semestre">
+                        <h4>Octavo Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Big Data y Analytics</div>
+                            <div class="materia">Internet de las Cosas</div>
+                            <div class="materia">Electiva Técnica II</div>
+                            <div class="materia">Práctica Empresarial</div>
+                            <div class="materia">Seminario de Investigación I</div>
+                        </div>
+                    </div>
+
+                    <div class="semestre">
+                        <h4>Noveno Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Electiva Técnica III</div>
+                            <div class="materia">Seminario de Investigación II</div>
+                            <div class="materia">Proyecto de Grado I</div>
+                            <div class="materia">Legislación Informática</div>
+                        </div>
+                    </div>
+
+                    <div class="semestre">
+                        <h4>Décimo Semestre</h4>
+                        <div class="materias-grid">
+                            <div class="materia">Proyecto de Grado II</div>
+                            <div class="materia">Gestión Empresarial</div>
+                            <div class="materia">Responsabilidad Social</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Líneas de Investigación -->
+                <section class="section">
+                    <h2><i class="fas fa-flask"></i> Líneas de Investigación</h2>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <h4>🤖 Inteligencia Artificial y Machine Learning</h4>
+                            <p>Desarrollo de sistemas inteligentes, aprendizaje automático, procesamiento de lenguaje natural y visión por computador.</p>
+                        </div>
+                        <div class="research-card">
+                            <h4>🔐 Ciberseguridad</h4>
+                            <p>Protección de sistemas, detección de amenazas, criptografía y seguridad en redes y aplicaciones.</p>
+                        </div>
+                        <div class="research-card">
+                            <h4>📊 Ciencia de Datos y Big Data</h4>
+                            <p>Análisis de grandes volúmenes de datos, minería de datos, analítica predictiva y visualización de información.</p>
+                        </div>
+                        <div class="research-card">
+                            <h4>🌐 Desarrollo de Software</h4>
+                            <p>Metodologías ágiles, arquitecturas de software, aplicaciones web y móviles, calidad de software.</p>
+                        </div>
+                        <div class="research-card">
+                            <h4>☁️ Computación en la Nube</h4>
+                            <p>Arquitecturas cloud, servicios en la nube, virtualización y contenedores.</p>
+                        </div>
+                        <div class="research-card">
+                            <h4>🔗 Internet de las Cosas (IoT)</h4>
+                            <p>Dispositivos conectados, sensores, automatización y ciudades inteligentes.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="cta-box">
+                    <h3>¿Listo para inscribirte?</h3>
+                    <p>Comienza tu camino hacia una carrera en tecnología</p>
+                    <a href="#" class="btn">Inscríbete Ahora</a>
+                    <a href="#" class="btn btn-secondary">Descargar Brochure</a>
+                </div>
+
+                <div class="info-list">
+                    <h4>Información de Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +57 (605) 588-5592</li>
+                        <li><i class="fas fa-envelope"></i> sistemas@unicesar.edu.co</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Sede Sabanas, Valledupar</li>
+                        <li><i class="fas fa-clock"></i> Lun - Vie: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="info-list" style="margin-top: 2rem;">
+                    <h4>Documentos Importantes</h4>
+                    <ul>
+                        <li><i class="fas fa-file-pdf"></i> <a href="#" style="color: #333; text-decoration: none;">Plan de Estudios</a></li>
+                        <li><i class="fas fa-file-pdf"></i> <a href="#" style="color: #333; text-decoration: none;">Registro Calificado</a></li>
+                        <li><i class="fas fa-file-pdf"></i> <a href="#" style="color: #333; text-decoration: none;">Acreditación</a></li>
+                        <li><i class="fas fa-file-pdf"></i> <a href="#" style="color: #333; text-decoration: none;">Reglamento Estudiantil</a></li>
+                    </ul>
+                </div>
+
+                <div class="info-list" style="margin-top: 2rem;">
+                    <h4>Enlaces Útiles</h4>
+                    <ul>
+                        <li><i class="fas fa-link"></i> <a href="#" style="color: #333; text-decoration: none;">Portal Estudiantes</a></li>
+                        <li><i class="fas fa-link"></i> <a href="#" style="color: #333; text-decoration: none;">Biblioteca Virtual</a></li>
+                        <li><i class="fas fa-link"></i> <a href="#" style="color: #333; text-decoration: none;">Calendario Académico</a></li>
+                        <li><i class="fas fa-link"></i> <a href="#" style="color: #333; text-decoration: none;">Proceso de Admisión</a></li>
+                    </ul>
+                </div>
+
+                <div class="cta-box" style="margin-top: 2rem; background: linear-gradient(135deg, #F2CC0C, #FFA500);">
+                    <h3 style="color: #1a1a1a;">¿Tienes preguntas?</h3>
+                    <p style="color: #333;">Agenda una asesoría personalizada</p>
+                    <a href="#" class="btn" style="background: #1a1a1a; color: white;">Solicitar Asesoría</a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Infraestructura y Recursos -->
+        <section class="section">
+            <h2><i class="fas fa-laptop-code"></i> Infraestructura y Recursos</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h4>💻 Laboratorios Especializados</h4>
+                    <p>5 laboratorios equipados con tecnología de última generación para prácticas de programación, redes, hardware y desarrollo de software.</p>
+                </div>
+                <div class="research-card">
+                    <h4>📚 Biblioteca y Recursos Digitales</h4>
+                    <p>Acceso a bases de datos especializadas, libros técnicos, revistas científicas y plataformas de aprendizaje en línea.</p>
+                </div>
+                <div class="research-card">
+                    <h4>🌐 Centro de Innovación</h4>
+                    <p>Espacio colaborativo para desarrollo de proyectos, hackathons, talleres y eventos de tecnología e innovación.</p>
+                </div>
+                <div class="research-card">
+                    <h4>🤝 Convenios Empresariales</h4>
+                    <p>Alianzas con empresas del sector TI para prácticas profesionales, proyectos reales y oportunidades laborales.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campo Laboral -->
+        <section class="section">
+            <h2><i class="fas fa-briefcase"></i> Campo Laboral</h2>
+            <div class="section-content">
+                <p style="margin-bottom: 1.5rem;">El Ingeniero de Sistemas de UNICESAR está capacitado para desempeñarse en diversos sectores y roles:</p>
+                
+                <div class="perfil-grid">
+                    <div class="perfil-box">
+                        <h4><i class="fas fa-building"></i> Sector Empresarial</h4>
+                        <ul>
+                            <li>Empresas de desarrollo de software</li>
+                            <li>Compañías de consultoría tecnológica</li>
+                            <li>Startups tecnológicas</li>
+                            <li>Corporaciones multinacionales</li>
+                            <li>Sector bancario y financiero</li>
+                            <li>Telecomunicaciones</li>
+                        </ul>
+                    </div>
+
+                    <div class="perfil-box">
+                        <h4><i class="fas fa-industry"></i> Áreas de Desempeño</h4>
+                        <ul>
+                            <li>Desarrollo de aplicaciones</li>
+                            <li>Análisis de datos</li>
+                            <li>Gestión de infraestructura TI</li>
+                            <li>Seguridad informática</li>
+                            <li>Gestión de proyectos</li>
+                            <li>Consultoría tecnológica</li>
+                            <li>Inteligencia artificial</li>
+                        </ul>
+                    </div>
+
+                    <div class="perfil-box">
+                        <h4><i class="fas fa-rocket"></i> Emprendimiento</h4>
+                        <ul>
+                            <li>Creación de startups tecnológicas</li>
+                            <li>Desarrollo de productos digitales</li>
+                            <li>Consultoría independiente</li>
+                            <li>Soluciones de e-commerce</li>
+                            <li>Aplicaciones móviles</li>
+                            <li>Servicios en la nube</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ventajas Competitivas -->
+        <section class="section">
+            <h2><i class="fas fa-star"></i> ¿Por qué estudiar Ingeniería de Sistemas en UNICESAR?</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h4>✅ Acreditación de Alta Calidad</h4>
+                    <p>Programa reconocido por el Ministerio de Educación Nacional con estándares de excelencia académica.</p>
+                </div>
+                <div class="research-card">
+                    <h4>👨‍🏫 Docentes Calificados</h4>
+                    <p>Profesores con formación de posgrado y amplia experiencia en la industria tecnológica.</p>
+                </div>
+                <div class="research-card">
+                    <h4>🔬 Investigación Aplicada</h4>
+                    <p>Participación en proyectos de investigación con aplicación real en la industria y la sociedad.</p>
+                </div>
+                <div class="research-card">
+                    <h4>🌍 Proyección Internacional</h4>
+                    <p>Convenios de movilidad académica con universidades extranjeras y programas de doble titulación.</p>
+                </div>
+                <div class="research-card">
+                    <h4>💼 Alta Empleabilidad</h4>
+                    <p>Más del 85% de egresados consiguen empleo en los primeros 6 meses después de graduarse.</p>
+                </div>
+                <div class="research-card">
+                    <h4>🎯 Enfoque Práctico</h4>
+                    <p>Metodología que combina teoría con práctica mediante proyectos reales y casos de estudio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="section">
+            <h2><i class="fas fa-comments"></i> Testimonios de Egresados</h2>
+            <div class="research-grid">
+                <div class="research-card" style="background: #F8F9FA;">
+                    <p style="font-style: italic; margin-bottom: 1rem;">"La formación que recibí en UNICESAR me permitió conseguir trabajo en una multinacional antes de graduarme. Los conocimientos en desarrollo de software y metodologías ágiles fueron clave."</p>
+                    <h4 style="margin-top: 1rem; color: #0A7338;">- Carlos Martínez</h4>
+                    <p style="font-size: 0.85rem; color: #666;">Senior Developer en Globant</p>
+                </div>
+                <div class="research-card" style="background: #F8F9FA;">
+                    <p style="font-style: italic; margin-bottom: 1rem;">"El programa me dio las bases para crear mi propia startup. Hoy tenemos 20 empleados y trabajamos con clientes en toda Latinoamérica."</p>
+                    <h4 style="margin-top: 1rem; color: #0A7338;">- Ana Rodríguez</h4>
+                    <p style="font-size: 0.85rem; color: #666;">CEO de TechSolutions SAS</p>
+                </div>
+                <div class="research-card" style="background: #F8F9FA;">
+                    <p style="font-style: italic; margin-bottom: 1rem;">"Los profesores no solo enseñan teoría, comparten su experiencia real en proyectos. Eso hace la diferencia al momento de enfrentarse al mundo laboral."</p>
+                    <h4 style="margin-top: 1rem; color: #0A7338;">- Luis Gómez</h4>
+                    <p style="font-size: 0.85rem; color: #666;">Data Scientist en Bancolombia</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntas Frecuentes -->
+        <section class="section">
+            <h2><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+            <div class="section-content">
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: #0A7338; margin-bottom: 0.5rem;">¿Cuál es el costo de la matrícula?</h4>
+                    <p>Como universidad pública, UNICESAR ofrece costos de matrícula subsidiados. El valor varía según el estrato socioeconómico del estudiante, desde un valor mínimo hasta aproximadamente 1.5 SMMLV por semestre.</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: #0A7338; margin-bottom: 0.5rem;">¿Necesito conocimientos previos de programación?</h4>
+                    <p>No es necesario. El programa inicia desde los fundamentos de programación y construye progresivamente las competencias técnicas necesarias.</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: #0A7338; margin-bottom: 0.5rem;">¿Qué oportunidades de práctica profesional existen?</h4>
+                    <p>Tenemos convenios con más de 50 empresas del sector tecnológico regional y nacional donde los estudiantes pueden realizar sus prácticas profesionales.</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: #0A7338; margin-bottom: 0.5rem;">¿Puedo estudiar y trabajar al mismo tiempo?</h4>
+                    <p>Sí, aunque el programa es presencial con horario diurno, muchos estudiantes logran compatibilizar sus estudios con trabajo de medio tiempo.</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: #0A7338; margin-bottom: 0.5rem;">¿El programa tiene doble titulación?</h4>
+                    <p>Actualmente estamos gestionando convenios de doble titulación con universidades internacionales. Consulta con la coordinación del programa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proceso de Admisión -->
+        <section class="section">
+            <h2><i class="fas fa-clipboard-check"></i> Proceso de Admisión</h2>
+            <div class="section-content">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="width: 80px; height: 80px; background: #0A7338; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem; font-weight: bold;">1</div>
+                        <h4 style="color: #0A7338; margin-bottom: 0.5rem;">Inscripción</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Completa el formulario de inscripción en línea y adjunta los documentos requeridos.</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="width: 80px; height: 80px; background: #57A641; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem; font-weight: bold;">2</div>
+                        <h4 style="color: #0A7338; margin-bottom: 0.5rem;">Prueba de Admisión</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Presenta el examen de admisión que evalúa competencias básicas en matemáticas y razonamiento.</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="width: 80px; height: 80px; background: #F2CC0C; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: #1a1a1a; font-size: 2rem; font-weight: bold;">3</div>
+                        <h4 style="color: #0A7338; margin-bottom: 0.5rem;">Resultados</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Consulta los resultados y completa el proceso de matrícula si eres admitido.</p>
+                    </div>
+                </div>
+
+                <div style="background: #F8F9FA; padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
+                    <h4 style="color: #0A7338; margin-bottom: 1rem;">Convocatorias Abiertas</h4>
+                    <p style="margin-bottom: 1.5rem;">Próxima convocatoria: Primer Periodo 2025</p>
+                    <a href="#" class="btn" style="background: #0A7338; color: white; padding: 1rem 2.5rem; text-decoration: none; display: inline-block;">Inscríbete Ahora</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="img/logo.png" alt="Logo UNICESAR" class="footer-logo-img">
+                <h3>Universidad Popular del Cesar</h3>
+                <p style="margin-bottom: 1rem;">Institución pública de educación superior del orden nacional</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="#" style="width: 40px; height: 40px; background: #57A641; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="width: 40px; height: 40px; background: #57A641; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="width: 40px; height: 40px; background: #57A641; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" style="width: 40px; height: 40px; background: #57A641; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Sedes</h3>
+                <p>📍<strong>Sede Sabanas</strong><br>Diagonal 21 No. 29-56<br>Valledupar, Cesar</p>
+                <p style="margin-top: 1rem;"><strong>📍Sede Hurtado</strong><br>Balneario Hurtado<br>Vía a Patillal</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📞 PBX: +57 (605) 588-5592</p>
+                <p>📧 pqrs@unicesar.edu.co</p>
+                <p>📧 info@unicesar.edu.co</p>
+                <p style="margin-top: 1rem;">🕒 Lunes a Viernes<br>8:00 am - 12:00 m | 2:00 pm - 6:00 pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="#">Portal Estudiantil</a>
+                <a href="#">Transparencia y Acceso</a>
+                <a href="#">PQRS</a>
+                <a href="#">Políticas Institucionales</a>
+                <a href="#">Bienestar Universitario</a>
+                <a href="programas.html">Programas Académicos</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Universidad Popular del Cesar - Todos los derechos reservados | NIT: 892.200.365-4</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animación de entrada para secciones
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
