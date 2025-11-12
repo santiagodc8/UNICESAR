@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programas Académicos - Universidad Popular del Cesar</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="programas.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    referrerpolicy="no-referrer"
-/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <!-- Top Header -->
     <div class="header-top">
@@ -87,7 +86,7 @@
                     <span class="faculty-icon">⚙️</span>
                     Facultad de Ingenierías y Tecnológicas
                 </h2>
-                
+
                 <div class="programs-grid">
                     <!-- Ingeniería de Sistemas -->
                     <div class="program-card-detail" data-level="pregrado">
@@ -115,7 +114,8 @@
                             </div>
                         </div>
                         <p class="program-description">
-                            Forma profesionales capaces de diseñar, desarrollar e implementar soluciones tecnológicas innovadoras.
+                            Forma profesionales capaces de diseñar, desarrollar e implementar soluciones tecnológicas
+                            innovadoras.
                         </p>
                         <div class="program-actions">
                             <a href="ing-sistemas.html" class="btn-detail">Ver más información</a>
@@ -197,7 +197,7 @@
                     <span class="faculty-icon">🏥</span>
                     Facultad de Ciencias de la Salud
                 </h2>
-                
+
                 <div class="programs-grid">
                     <!-- Medicina -->
                     <div class="program-card-detail" data-level="pregrado">
@@ -308,7 +308,7 @@
                     <span class="faculty-icon">💼</span>
                     Facultad de Ciencias Económicas y Administrativas
                 </h2>
-                
+
                 <div class="programs-grid">
                     <!-- Administración de Empresas -->
                     <div class="program-card-detail" data-level="pregrado">
@@ -418,7 +418,7 @@
                     <span class="faculty-icon">⚖️</span>
                     Facultad de Derecho y Ciencias Políticas
                 </h2>
-                
+
                 <div class="programs-grid">
                     <!-- Derecho -->
                     <div class="program-card-detail" data-level="pregrado">
@@ -477,11 +477,11 @@
                 <p>Universidad Popular del Cesar</p>
                 <p>Institución pública de educación superior del orden nacional</p>
                 <div class="footer-social">
-                <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon twitter"><i class="fab fa-x-twitter"></i></a>
-                <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-            </div>
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Sedes</h3>
@@ -519,9 +519,9 @@
             btn.addEventListener('click', () => {
                 tabBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                
+
                 const level = btn.dataset.level;
-                
+
                 programCards.forEach(card => {
                     if (level === 'pregrado' && !card.dataset.level) {
                         card.style.display = 'block';
@@ -538,11 +538,11 @@
         const searchInput = document.getElementById('programSearch');
         searchInput.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase();
-            
+
             programCards.forEach(card => {
                 const title = card.querySelector('h3').textContent.toLowerCase();
                 const description = card.querySelector('.program-description').textContent.toLowerCase();
-                
+
                 if (title.includes(searchTerm) || description.includes(searchTerm)) {
                     card.style.display = 'block';
                 } else {
@@ -556,7 +556,7 @@
         facultyFilter.addEventListener('change', (e) => {
             const faculty = e.target.value;
             const facultySections = document.querySelectorAll('.faculty-section');
-            
+
             facultySections.forEach(section => {
                 if (faculty === 'todas' || section.dataset.faculty === faculty) {
                     section.style.display = 'block';
@@ -567,4 +567,5 @@
         });
     </script>
 </body>
+
 </html>
